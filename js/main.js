@@ -110,6 +110,20 @@
         $.magnificPopup.close();
     });
 
+
+    // Owl Carousel For clients
+    $("#clients_slider").owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 5000,
+        items: 1,
+        loop: true,
+        margin: 30,
+        nav: false,
+        smartSpeed:1000,
+        pagination: false,
+        dots: true,
+    });
+
 })(jQuery); // End of use strict
 
 // site preloader

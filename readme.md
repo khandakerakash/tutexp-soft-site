@@ -18,7 +18,7 @@ npm install
 npm run start
 ```
 
-## View:
+## Sample View:
 
 ![alt text](img/demo.png)
 
