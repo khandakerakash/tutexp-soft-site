@@ -124,6 +124,33 @@
         dots: true,
     });
 
+    // Owl Carousel For Team
+    $("#team_slider").owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 5000,
+        loop: true,
+        margin: 18,
+        nav: false,
+        pagination: false,
+        dots: true,
+        smartSpeed:1000,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            575: {
+                items: 2,
+            },
+            767: {
+                items: 3,
+            },
+            1199: {
+                items: 4,
+            }
+        }
+    });
+
 })(jQuery); // End of use strict
 
 // site preloader
