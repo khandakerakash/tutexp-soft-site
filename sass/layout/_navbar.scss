@@ -40,6 +40,10 @@
           }
         }
       }
+
+      @media (min-width: 300px) and (max-width: 991px) {
+        text-align: center !important;
+      }
     }
   }
   @media (min-width: 992px) {

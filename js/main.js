@@ -151,6 +151,42 @@
         }
     });
 
+    // open contact form home page
+    $('#send_message').on('click',function(e){
+        e.preventDefault();
+        $('.contact_popup').css('display','flex');
+    });
+    $('.contact_popup').on('click',function(e){
+        var $target = e.target.nodeName;
+        if($target != 'FORM' && $target != 'INPUT' && $target != 'BUTTON' && $target != 'TEXTAREA'){
+            $(this).fadeOut();
+            $(this).addClass('animated');
+        }
+    });
+
+    // scrollup back to top
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn("slow");
+        } else {
+            $('.scrollup').fadeOut("slow");
+        }
+    });
+
+    $('.scrollup').click(function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+
+    // site preloader
+    $(window).on('load', function(){
+        setTimeout(function(){
+            $('#cover').fadeOut(400);
+        },400)
+    });
+
 })(jQuery); // End of use strict
 
 // site preloader

@@ -15,14 +15,32 @@
 
   padding-top: 10rem;
 
+  @media (min-width: 300px) and (max-width: 1199px) {
+    padding-top: 5rem;
+  }
+
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
     height: 75vh;
+
+    @media (min-width: 300px) and (max-width: 767px) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      height: 100vh;
+    }
   }
 
   .hero-text {
     padding-top: 15rem;
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding-top: 8rem;
+    }
+
+    @media (min-width: 300px) and (max-width: 767px) {
+      padding-top: 5rem;
+    }
 
     h1 {
       @include zcool-font;
@@ -35,6 +53,18 @@
       visibility: visible;
       animation-delay: 0.2s;
       animation-name: fadeInDown;
+
+      @media (min-width: 768px) and (max-width: 991px) {
+        font-size: $font-32;
+      }
+
+      @media (min-width: 576px) and (max-width: 767px) {
+        font-size: $font-36;
+      }
+
+      @media (min-width: 300px) and (max-width: 575px) {
+        font-size: $font-24;
+      }
     }
 
     p {
@@ -53,6 +83,14 @@
 
   .hero-icons {
     padding-top: 16rem;
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding-top: 9rem;
+    }
+
+    @media (min-width: 300px) and (max-width: 767px) {
+      padding-top: 2rem;
+    }
 
     ul {
       margin: 0;

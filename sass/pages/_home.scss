@@ -7,15 +7,9 @@
   position: relative;
   overflow: hidden;
 
-  visibility: visible;
-  animation-delay: 0s;
-  animation-name: fadeInUp;
-
-  z-index: 1;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  @media (min-width: 300px) and (max-width: 991px) {
+    margin-bottom: 2rem;
+  }
 
   &-icon {
     margin-bottom: 2.5rem;
@@ -752,47 +746,6 @@
       }
     }
   }
-
-  .owl-carousel .owl-dots {
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  .owl-carousel .owl-dots .owl-dot {
-    width: 9px;
-    height: 9px;
-    background: $red-drak;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: .5rem;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .owl-carousel.blue .owl-dots .owl-dot {
-    background-image: linear-gradient($color-secondary, $color-primary  );
-  }
-
-  .owl-carousel .owl-dots .owl-dot.active {
-    width: 30px;
-    border-radius: 25px;
-  }
-
-  .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
-    display: none !important;
-  }
-
-  .owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
-    cursor: pointer;
-    cursor: hand;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
 }
 
 /* MISSION & VISION SECTION STYLED */
@@ -842,6 +795,7 @@
     .team_item {
       border-radius: 8px;
       overflow: hidden;
+      box-shadow: 0 0 14px $gray-5;
 
       .pic {
         position: relative;
@@ -936,7 +890,7 @@
 
       .team-content {
         padding: 15px 0;
-        background: $gray-1;
+        background: $gray-2;
         overflow: hidden;
         position: relative;
         border-top: 3px solid $color-secondary;
@@ -1007,6 +961,214 @@
   }
 }
 
+/* CONTACT SECTION STYLED */
+#contact {
+  padding: 5rem 0;
+  background-color: $gray-1;
+
+  .contact-us {
+    background: $white;
+    border-radius: 8px;
+    padding: 5rem 4rem;
+    box-shadow: 0 0 14px $gray-5;
+    margin-right: 0;
+    margin-left: 0;
+
+    .contact_info {
+      border-radius: 8px;
+
+      .contact_item {
+        margin-bottom: 2rem;
+      }
+
+      .info_icon {
+        font-size: $font-26;
+        margin-right: 1rem;
+      }
+
+      p:first-of-type {
+        font-size: $font-16;
+        font-weight: 500;
+      }
+
+      p:last-of-type {
+        font-size: $font-12;
+        font-weight: 500;
+      }
+
+      p {
+        @include roboto-font;
+        margin-bottom: 0;
+        color: $gray-4;
+
+        a {
+          text-decoration: none;
+          text-transform: lowercase !important;
+          color: $gray-4 !important;
+          transition: all 0.4s;
+
+          &:hover {
+            color: $green-light !important;
+          }
+        }
+      }
+    }
+
+    &_btn,
+    #contact_submit {
+      font-size: $font-14;
+      @include roboto-font;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      position: relative;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      border-radius: 25px;
+      background: linear-gradient(to right bottom, $color-secondary, $color-primary);
+
+      &:hover {
+        box-shadow: 0 15px 15px -11px rgba(0, 0, 0, 0.4);
+        -webkit-transform: scale(1.05, 1.05);
+        -moz-transform: scale(1.05, 1.05);
+        -o-transform: scale(1.05, 1.05);
+        transform: scale(1.05, 1.05);
+        -webkit-transform: translate(0, -0.5rem);
+        -moz-transform: translate(0, -0.5rem);
+        -o-transform: translate(0, -0.5rem);
+        transform: translate(0, -0.5rem);
+        background: linear-gradient(to right bottom, $color-primary, $color-secondary);
+      }
+    }
+
+    .map-title {
+      font-size: $font-20;
+      @include roboto-font;
+      font-weight: 500;
+      text-align: center;
+      text-transform: uppercase;
+      color: $gray-4;
+
+      @media (min-width: 300px) and (max-width: 767px) {
+        margin-top: 4rem;
+      }
+    }
+
+    &-map {
+
+      img {
+        box-shadow: 0 0 14px $gray-5;
+        border-radius: 8px;
+      }
+    }
+  }
+}
 
 
+.contact_popup {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  z-index: 1040;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact_form {
+  max-width: 500px;
+  background: $gray-1;
+  padding: 2rem;
+  box-shadow: 0 0 10px $gray-5;
+  border-radius: 8px;
+
+  .form-input {
+    font-size: $font-14;
+    @include roboto-font;
+    font-weight: 500;
+    min-height: 45px;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    border: 2px solid $gray-5;
+    background: transparent;
+    margin-bottom: 1.5rem;
+
+    &::placeholder {
+      color: $gray-5;
+    }
+  }
+
+  textarea {
+    resize: none;
+    padding: 0.5rem 1rem;
+    height: 84px;
+    border-radius: 25px;
+    border: 2px solid $gray-5;
+    background: transparent;
+    overflow: auto;
+  }
+}
+
+
+.footer-section {
+  padding: 3rem 0 2rem 0;
+  background: linear-gradient(to right bottom, $color-secondary, $color-primary);
+
+  p {
+    font-size: $font-20;
+    @include roboto-font;
+    font-weight: 500;
+  }
+}
+
+/* COMMON CAROUSEL UTILITIES */
+.owl-carousel .owl-dots {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+  width: 9px;
+  height: 9px;
+  background: $red-drak;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: .5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel.blue .owl-dots .owl-dot {
+  background-image: linear-gradient($color-secondary, $color-primary  );
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+  width: 30px;
+  border-radius: 25px;
+}
+
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+  display: none !important;
+}
+
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#cover {
+  background: url(../img/preloader.gif) no-repeat scroll center center #e3f4fd; position: fixed; height: 100%; width: 100%; z-index: 9999999;
+}
 
