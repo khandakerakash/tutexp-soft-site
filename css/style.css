@@ -160,10 +160,10 @@ input:focus, button:focus, textarea:focus {
       #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
       #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
         background-color: transparent; }
-  @media (min-width: 300px) and (max-width: 991px) {
+  @media (min-width: 300px) and (max-width: 767px) {
     #mainNav .navbar-nav > li.nav-item {
       text-align: center !important; } }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     #mainNav {
       border-color: transparent;
       background-color: transparent; }
@@ -1102,29 +1102,54 @@ input:focus, button:focus, textarea:focus {
 #contact_form {
   max-width: 500px;
   background: #f9f9f9;
-  padding: 2rem;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
   box-shadow: 0 0 10px #cccccc;
   border-radius: 8px; }
-  #contact_form .form-input {
-    font-size: 1.4rem;
+  #contact_form .contact_form-input {
+    position: relative; }
+  #contact_form .contact_form-input input,
+  #contact_form .contact_form-input textarea {
     font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     font-weight: 500;
-    min-height: 45px;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    border: 2px solid #cccccc;
-    background: transparent;
-    margin-bottom: 1.5rem; }
-    #contact_form .form-input::placeholder {
-      color: #cccccc; }
-  #contact_form textarea {
-    resize: none;
-    padding: 0.5rem 1rem;
-    height: 84px;
-    border-radius: 25px;
-    border: 2px solid #cccccc;
-    background: transparent;
-    overflow: auto; }
+    font-size: 1.4rem;
+    color: #464646;
+    margin-bottom: 3rem;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #cccccc;
+    outline: none;
+    background: transparent; }
+  #contact_form .contact_form-input input {
+    padding: 0.5rem 0; }
+  #contact_form .contact_form-input textarea {
+    padding: 0 !important; }
+  #contact_form .contact_form-input input:focus,
+  #contact_form .contact_form-input textarea:focus {
+    border-bottom-color: #E04622; }
+  #contact_form .contact_form-input input:focus ~ label,
+  #contact_form .contact_form-input input:valid ~ label,
+  #contact_form .contact_form-input textarea:focus ~ label,
+  #contact_form .contact_form-input textarea:valid ~ label {
+    top: -22px;
+    left: 0;
+    color: #E04622;
+    font-size: 1.2rem; }
+  #contact_form .contact_form-input label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem 0;
+    font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #464646;
+    text-transform: uppercase;
+    pointer-events: none;
+    transition: 0.5s; }
+    #contact_form .contact_form-input label span {
+      color: #df1d41; }
 
 .footer-section {
   padding: 3rem 0 2rem 0;
@@ -1133,6 +1158,9 @@ input:focus, button:focus, textarea:focus {
     font-size: 2rem;
     font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     font-weight: 500; }
+    @media (min-width: 300px) and (max-width: 375px) {
+      .footer-section p {
+        font-size: 1.6rem; } }
 
 /* COMMON CAROUSEL UTILITIES */
 .owl-carousel .owl-dots {
@@ -1171,7 +1199,7 @@ input:focus, button:focus, textarea:focus {
   user-select: none; }
 
 #cover {
-  background: url(../img/preloader.gif) no-repeat scroll center center #e3f4fd;
+  background: url(../img/preloader-2.gif) no-repeat scroll center center #e3f4fd;
   position: fixed;
   height: 100%;
   width: 100%;

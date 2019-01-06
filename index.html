@@ -25,7 +25,7 @@
 <!-- PRELOADER END -->
 
 <!-- NAVIGATION BAR START -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
             <img src="img/logo.png" alt="TuteXp Software" class="logo">
@@ -962,23 +962,60 @@
                 </div>
 
                 <!-- POPUP CONTACT FORM -->
+                <!--<div class="contact_popup fadeInUp animated" style="display: none;">-->
+                    <!--<form id="contact_form">-->
+                        <!--<div class="row">-->
+                            <!--<div class="col-lg-6 col-md-6 col-sm-12">-->
+                                <!--<input type="text" id="your_name" class="form-input w-100" name="full-name" placeholder="Full Name" required="">-->
+                            <!--</div>-->
+                            <!--<div class="col-lg-6 col-md-6 col-sm-12">-->
+                                <!--<input type="email" id="email" class="form-input w-100" name="email" placeholder="Email" required="">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<input type="text" id="phone" class="form-input w-100" name="phone" placeholder="Phone">-->
+                        <!--<textarea class="form-input w-100" id="message" placeholder="Message" name="message"></textarea>-->
+                        <!--<button id="contact_submit" class="text-white w-100 text-uppercase" type="submit" name="button">-->
+                            <!--submit-->
+                        <!--</button>-->
+                    <!--</form>-->
+                <!--</div>-->
+
+                <!-- Material Style form -->
                 <div class="contact_popup fadeInUp animated" style="display: none;">
                     <form id="contact_form">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12">
-                                <input type="text" id="your_name" class="form-input w-100" name="full-name" placeholder="Full Name" required="">
+                                <div class="contact_form-input">
+                                    <input type="text" class="w-100" name="full-name" required="">
+                                    <label>Name <span>*</span></label>
+                                </div>
                             </div>
+
                             <div class="col-lg-6 col-md-6 col-sm-12">
-                                <input type="email" id="email" class="form-input w-100" name="email" placeholder="Email" required="">
+                                <div class="contact_form-input">
+                                    <input type="text" class="w-100" name="phone" required="">
+                                    <label>Phone <span>*</span></label>
+                                </div>
                             </div>
                         </div>
-                        <input type="text" id="phone" class="form-input w-100" name="phone" placeholder="Phone">
-                        <textarea class="form-input w-100" id="message" placeholder="Message" name="message"></textarea>
+
+                        <div class="contact_form-input">
+                            <input type="email" class="w-100" name="email" required="">
+                            <label>Email <span>*</span></label>
+                        </div>
+
+                        <div class="contact_form-input">
+                            <textarea class="w-100 p-0" name="message" required=""></textarea>
+                            <label>Message <span>*</span></label>
+                        </div>
+
                         <button id="contact_submit" class="text-white w-100 text-uppercase" type="submit" name="button">
                             submit
                         </button>
                     </form>
                 </div>
+                <!-- Material Style form -->
+
                 <!-- POPUP CONTACT FORM -->
             </div>
             <!-- CONTACT PART -->

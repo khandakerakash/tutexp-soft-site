@@ -41,12 +41,12 @@
         }
       }
 
-      @media (min-width: 300px) and (max-width: 991px) {
+      @media (min-width: 300px) and (max-width: 767px) {
         text-align: center !important;
       }
     }
   }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     border-color: transparent;
     background-color: transparent;
     .navbar-brand {
