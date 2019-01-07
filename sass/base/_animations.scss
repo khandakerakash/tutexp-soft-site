@@ -42,3 +42,21 @@
         transform: translate(0);
     }
 }
+
+@keyframes typing-text {
+    from {
+        width: 0;
+    }
+    to {
+        width: 31ch;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: $white;
+    }
+}

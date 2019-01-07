@@ -192,6 +192,7 @@
 
         @media only screen and (min-width: 300px) and (max-width: 375px) {
           display: block;
+          margin-bottom: 1rem;
         }
 
         span {
@@ -605,9 +606,99 @@
   }
 }
 
+/* HYBRID MOBILE SECTION STYLED */
+.hybrid_mobile {
+
+  @media only screen and (min-width: 300px) and (max-width: 479px) {
+    display: none !important;
+  }
+
+  //margin: 3rem 0;
+  padding: 3rem 0 1rem 0;
+  background: linear-gradient(to right bottom, $color-primary, $color-secondary);
+  transform: skewY(-2deg);
+
+  @media only screen and (min-width: 300px) and (max-width: 479px) {
+    transform: skewY(-1deg);
+
+    & > * {
+      transform: skewY(1deg);
+    }
+  }
+
+  & > * {
+    transform: skewY(2deg);
+  }
+
+  &-desc {
+    font-size: $font-56;
+    color: $white;
+
+    h2 {
+      @include roboto-font;
+      font-size: $font-26;
+      font-weight: 500;
+      color: $white;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      @include roboto-font;
+      font-size: $font-16;
+      line-height: 1.4;
+      font-weight: 500;
+      color: $white;
+      text-align: justify;
+    }
+  }
+
+  &-img {
+    position: relative;
+    width: 360px;
+    height: 640px;
+    background: rgba($black, 0.1);
+    transform: rotate(-30deg) skew(25deg) scale(0.8);
+    transition: 0.5s;
+    margin-top: 5rem;
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      width: 220px;
+      height: 340px;
+    }
+
+
+    img {
+      position: absolute;
+      width: 100%;
+      transition: 0.5s;
+    }
+
+    &:hover img:nth-child(4) {
+      transform: translate(160px, -160px);
+      opacity: 1;
+    }
+
+    &:hover img:nth-child(3) {
+      transform: translate(120px, -120px);
+      opacity: 0.8;
+    }
+
+    &:hover img:nth-child(2) {
+      transform: translate(80px, -80px);
+      opacity: 0.6;
+    }
+
+    &:hover img:nth-child(1) {
+      transform: translate(40px, -40px);
+      opacity: 0.4;
+    }
+  }
+}
+
 /* TESTIMONIAL SECTION STYLED */
 #testimonial {
-  margin: 8rem 0 4rem 0;
+  margin: 4rem 0;
   padding: 8rem 0 4rem 0;
   background-color: $gray-1;
 

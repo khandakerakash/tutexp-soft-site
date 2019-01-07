@@ -26,6 +26,18 @@
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes typing-text {
+  from {
+    width: 0; }
+  to {
+    width: 31ch; } }
+
+@keyframes blink {
+  from {
+    border-color: transparent; }
+  to {
+    border-color: #fff; } }
+
 *,
 *::after,
 *::before {
@@ -222,25 +234,45 @@ input:focus, button:focus, textarea:focus {
     @media (min-width: 300px) and (max-width: 767px) {
       .masthead .hero-text {
         padding-top: 5rem; } }
-    .masthead .hero-text h1 {
+    .masthead .hero-text_h1 {
       font-family: 'ZCOOL XiaoWei', serif;
-      font-size: 4.8rem;
+      font-size: 3.2rem;
       font-weight: 400;
       color: white;
       text-transform: uppercase;
       margin-bottom: 2rem;
-      visibility: visible;
-      animation-delay: 0.2s;
-      animation-name: fadeInDown; }
+      animation: typing-text 5s steps(31), blink 0.5s infinite alternate;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #fff;
+      display: block; }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .masthead .hero-text_h1 {
+          font-size: 2.7rem; } }
       @media (min-width: 768px) and (max-width: 991px) {
-        .masthead .hero-text h1 {
-          font-size: 3.2rem; } }
+        .masthead .hero-text_h1 {
+          font-size: 3.2rem;
+          animation: unset;
+          overflow: hidden;
+          white-space: unset;
+          border-right: unset;
+          display: unset; } }
       @media (min-width: 576px) and (max-width: 767px) {
-        .masthead .hero-text h1 {
-          font-size: 3.6rem; } }
+        .masthead .hero-text_h1 {
+          font-size: 3.6rem;
+          animation: unset;
+          overflow: hidden;
+          white-space: unset;
+          border-right: unset;
+          display: unset; } }
       @media (min-width: 300px) and (max-width: 575px) {
-        .masthead .hero-text h1 {
-          font-size: 2.4rem; } }
+        .masthead .hero-text_h1 {
+          font-size: 2.4rem;
+          animation: unset;
+          overflow: hidden;
+          white-space: unset;
+          border-right: unset;
+          display: unset; } }
     .masthead .hero-text p {
       font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
       font-size: 1.6rem;
@@ -451,7 +483,8 @@ input:focus, button:focus, textarea:focus {
             margin: 0 0.4rem; } }
         @media only screen and (min-width: 300px) and (max-width: 375px) {
           #portfolio .portfolio_nav ul li {
-            display: block; } }
+            display: block;
+            margin-bottom: 1rem; } }
         #portfolio .portfolio_nav ul li span {
           display: block;
           padding: 0.8rem 2.5rem;
@@ -767,9 +800,70 @@ input:focus, button:focus, textarea:focus {
     .mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content {
       width: 100%; } }
 
+/* HYBRID MOBILE SECTION STYLED */
+.hybrid_mobile {
+  padding: 3rem 0 1rem 0;
+  background: linear-gradient(to right bottom, #39459b, #0f97d5);
+  transform: skewY(-2deg); }
+  @media only screen and (min-width: 300px) and (max-width: 479px) {
+    .hybrid_mobile {
+      display: none !important; } }
+  @media only screen and (min-width: 300px) and (max-width: 479px) {
+    .hybrid_mobile {
+      transform: skewY(-1deg); }
+      .hybrid_mobile > * {
+        transform: skewY(1deg); } }
+  .hybrid_mobile > * {
+    transform: skewY(2deg); }
+  .hybrid_mobile-desc {
+    font-size: 5.6rem;
+    color: #fff; }
+    .hybrid_mobile-desc h2 {
+      font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      font-size: 2.6rem;
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem; }
+    .hybrid_mobile-desc p {
+      font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      font-size: 1.6rem;
+      line-height: 1.4;
+      font-weight: 500;
+      color: #fff;
+      text-align: justify; }
+  .hybrid_mobile-img {
+    position: relative;
+    width: 360px;
+    height: 640px;
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotate(-30deg) skew(25deg) scale(0.8);
+    transition: 0.5s;
+    margin-top: 5rem; }
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      .hybrid_mobile-img {
+        width: 220px;
+        height: 340px; } }
+    .hybrid_mobile-img img {
+      position: absolute;
+      width: 100%;
+      transition: 0.5s; }
+    .hybrid_mobile-img:hover img:nth-child(4) {
+      transform: translate(160px, -160px);
+      opacity: 1; }
+    .hybrid_mobile-img:hover img:nth-child(3) {
+      transform: translate(120px, -120px);
+      opacity: 0.8; }
+    .hybrid_mobile-img:hover img:nth-child(2) {
+      transform: translate(80px, -80px);
+      opacity: 0.6; }
+    .hybrid_mobile-img:hover img:nth-child(1) {
+      transform: translate(40px, -40px);
+      opacity: 0.4; }
+
 /* TESTIMONIAL SECTION STYLED */
 #testimonial {
-  margin: 8rem 0 4rem 0;
+  margin: 4rem 0;
   padding: 8rem 0 4rem 0;
   background-color: #f9f9f9; }
   #testimonial .testimonial-box {
