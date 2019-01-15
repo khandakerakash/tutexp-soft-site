@@ -43,3 +43,109 @@ input:focus, button:focus, textarea:focus {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
+
+.social_share-btn {
+  padding: 3rem 0;
+
+  ul {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    li {
+      position: relative;
+      list-style: none;
+      padding: 20px;
+      //height: 50px;
+      margin: 0 2.5rem;
+      transform: rotate(-30deg) skew(25deg);
+      background: $gray-5;
+
+      @media (min-width: 768px) and (max-width: 991px) {
+        padding: 15px;
+        margin: 0 1.5rem;
+      }
+
+      @media (min-width: 300px) and (max-width: 420px) {
+        padding: 15px;
+        margin: 0 1.5rem;
+      }
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $black;
+        transition: 0.5s;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        font-size: $font-20;
+
+        @media (min-width: 768px) and (max-width: 991px) {
+          font-size: $font-16;
+        }
+
+        @media (min-width: 300px) and (max-width: 420px) {
+          font-size: $font-16;
+        }
+      }
+
+      &:hover span {
+
+        box-shadow: -1px 1px 1px rgba($black, 0.1);
+
+        &:nth-child(5) {
+          transform: translate(40px, -40px);
+          opacity: 1;
+        }
+
+        &:nth-child(4) {
+          transform: translate(30px, -30px);
+          opacity: 0.8;
+        }
+
+        &:nth-child(3) {
+          transform: translate(20px, -20px);
+          opacity: 0.6;
+        }
+
+        &:nth-child(2) {
+          transform: translate(10px, -10px);
+          opacity: 0.4;
+        }
+
+        &:nth-child(1) {
+          transform: translate(0, 0);
+          opacity: 0.2;
+        }
+      }
+
+      &:nth-child(1) span {
+        background: $fb-dark;
+      }
+
+      &:nth-child(2) span {
+        background: $twiter;
+      }
+
+      &:nth-child(3) span {
+        background: $linkedin;
+      }
+
+      &:nth-child(4) span {
+        background: $google-mama;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .d-none-xl {
+    display: none !important;
+  }
+}

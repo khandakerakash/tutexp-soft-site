@@ -1,4 +1,5 @@
 .masthead {
+  //position: relative;
   margin: 0;
   font-family: 'Helvetica', sans-serif;
   //background: rgb(26, 188, 156);
@@ -192,5 +193,41 @@
     min-height: 750px;
   }
 
+
+  // wave style
+  //&_wave-bg {
+  //  position: absolute;
+  //  width: 100%;
+  //  height: 219px;
+  //  bottom: 0;
+  //  left: 0;
+  //  background: url(../img/wave.png);
+  //  animation: wave 10s linear infinite;
+  //
+  //  &:before {
+  //    content: '';
+  //    position: absolute;
+  //    width: 100%;
+  //    height: 219px;
+  //    bottom: 0;
+  //    left: 0;
+  //    opacity: 0.4;
+  //    background: url(../img/wave.png);
+  //    animation: wave-reverse 10s linear infinite;
+  //  }
+  //
+  //  &:after {
+  //    content: '';
+  //    position: absolute;
+  //    width: 100%;
+  //    height: 219px;
+  //    bottom: 0;
+  //    left: 0;
+  //    opacity: 0.4;
+  //    background: url(../img/wave.png);
+  //    animation-delay: -5s;
+  //    animation: wave 20s linear infinite;
+  //  }
+  //}
 }
 

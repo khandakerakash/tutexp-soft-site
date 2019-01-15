@@ -39,6 +39,18 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 
+    // Hamburger Icon
+    // (function () {
+    //     $('.mobile_menu-icon_wrap').on('click', function() {
+    //         $('.hamburger-icon').toggleClass('animate');
+    //     })
+    // })();
+
+    $('.mobile_menu-icon_wrap').on('click', function () {
+        $('#navbarResponsive').toggleClass("Collapse_ham");
+        $('.hamburger-icon').toggleClass('animate');
+    });
+
     // Scroll reveal calls
     window.sr = ScrollReveal();
 
@@ -98,12 +110,14 @@
         filterList.init();
     });
 
-    // Modal popup$(function () {
+    //Modal popup$(function () {
     $('.portfolio-popup').magnificPopup({
         type: 'inline',
         preloader: false,
         focus: '#username',
-        modal: true
+        modal: true,
+        removalDelay: 300,
+        mainClass: 'mfp-fade'
     });
     $(document).on('click', '.portfolio-modal-dismiss', function(e) {
         e.preventDefault();

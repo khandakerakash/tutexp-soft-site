@@ -60,3 +60,23 @@
         border-color: $white;
     }
 }
+
+@keyframes wave {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 1920px;
+    }
+}
+
+@keyframes wave-reverse {
+    0% {
+        background-position: 1920px;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}
